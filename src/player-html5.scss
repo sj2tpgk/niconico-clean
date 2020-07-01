@@ -1,0 +1,47 @@
+@-moz-document regexp(".*www\.nicovideo\.jp/watch.*") {
+
+    // Remove news scroll
+    .MarqueeContainer { @include noad; }
+
+    // Header
+    #CommonHeader { @include header; }
+
+    // Tags
+    .TagItem {
+	background: transparent;
+	border: none;
+    }
+
+    // Player
+    .MainContainer {
+        margin-top: 6em;
+        margin-bottom: 12em;
+        box-shadow: none;
+    }
+    .MainContainer-player {
+        margin: auto auto;
+        box-shadow: 0px 0px 2px 1px #888;
+
+        // Don't set a fixed width; will not be resized when changing player size
+	// width: 640px;
+    }
+
+    // Remove premium recommendation popups over seekbar
+    .AnywhereSeekablePremiumLinkContainer, .SeekBarStoryboardPremiumLink,
+    .PreVideoStartPremiumLinkContainer
+    { @include remove; }
+
+    // Remove comment panel, related videos (right side of player)
+    .MainContainer-playerPanel { @include remove; }
+
+    // Remove ichiba, related contents, related items, portal site link
+    .BottomContainer { @include remove; }
+
+    // Remove switch to flash banner
+    // div.InView.InViewLazyLoadContainer.WatchAppContainer-switchToFlash { @include delete; }
+    .SwitchToFlashLead { background: transparent; }
+    .SwitchToFlashLead-button { color: #888; }
+
+    // Remove "page top" button
+    .FooterContainer-pageTop { @include remove; }
+}

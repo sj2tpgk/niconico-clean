@@ -1,0 +1,15 @@
+// Top page (and variants for various genres)
+
+// Common code for all genres
+@-moz-document regexp(".*www\.nicovideo\.jp/video_top.*") {
+
+    // Remove ads
+    .HeaderContainer-ads,
+    .RecommendAreaContainer-banner.RecommendAreaContainer-webPcPrime,
+    .RankingVideosContainer-columnRight,
+    .NewArrivalVideosContainer-columnRight,
+    .NewCommentVideosContainer-columnRight,
+    .BaseLayout-footer,
+    { @include noad; }
+
+}

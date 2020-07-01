@@ -1,0 +1,29 @@
+// Dictionary
+
+@-moz-document regexp(".*dic\.nicovideo\.jp/a/.*") {
+
+    // Remove ads
+    #dic_pc_468x60_north, .ad-bannar-maincolumn-top,
+    #dic_pc_300x250_east, #dic_pc_300x250_east_2nd,
+    #floatPanel,
+    .adsense-728.a-banner_space-bottom,
+    .logly-lift-ad.logly-lift-ad-ad, .logly-lift-credit,
+    .adsense-728.a-banner_middle,
+    .st-bbs_adContents {
+        @include noad;
+    }
+
+    // Remove right column
+    #right-column { @include remove; }
+
+    // Center main column
+    #main {
+	width: auto;
+    }
+
+    // Remove recommended news
+    .st-box_heading.st-box_heading-news, .st-box_contents.a-recommend_news-contents {
+        @include remove;
+    }
+
+}

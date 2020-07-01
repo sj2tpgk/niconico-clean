@@ -1,0 +1,42 @@
+// Search page
+// Basic layout is common in keyword-search and tag-search
+
+@-moz-document regexp(".*www\.nicovideo\.jp/(search|tag).*") {
+
+    // Remove ads
+    #premiumHeader, .notice.banner, .billboard_ad, .column.sub .ads, .banner.leadBanner.ads
+    { @include noad; }
+
+    // Remove social media buttons
+    ul.share { @include nosocial; }
+
+    // White site header
+    #CommonHeader { @include header; }
+
+    // Remove side panel
+    .column.sub { @include remove; }
+
+    // Center search results (because we removed the side panel)
+    .container > div:nth-child(1) {
+        padding-left: calc((100% - 700px) / 2);
+    }
+
+    // Remove "page top" button
+    .FooterContainer-pageTop { @include remove; }
+
+}
+
+
+// Search by keyword
+
+@-moz-document regexp(".*www\.nicovideo\.jp/search.*") {
+
+}
+
+
+// Search by tags
+
+@-moz-document regexp(".*www\.nicovideo\.jp/tag.*") {
+
+
+}

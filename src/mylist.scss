@@ -1,0 +1,21 @@
+// Mylist page
+
+@-moz-document regexp(".*www\.nicovideo\.jp/mylist/.*") {
+
+    // Remove ads
+    #premiumHeader, #head_ads, #web_pc_prime, #web_pc_360 {
+        @include noad;
+    }
+
+    // Site header
+    #CommonHeader { @include header; }
+
+    // Remove "paste to blog sites"
+    .content_312 { @include remove; }
+
+    // Center divs
+    .content_672 {
+	margin-left: calc((100% - 672px)/2);
+    }
+
+}

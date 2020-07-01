@@ -1,0 +1,21 @@
+$clean: true; // Aggressive cleaning
+
+// Remove ads and social media buttons
+@mixin noad     { display: none; }
+@mixin nosocial { display: none; }
+@mixin remove   { display: none; }
+
+@mixin header {
+    #siteHeaderInner { background: #222; }
+    span { color: #ddd; }
+    background: #222;
+    // position: static; // title is shown vertically
+    // filter: invert(100%);
+
+    // Hide premium register icon
+    // classes of header elements are now obfuscated?
+    a[href*=premium] {
+        color: unset;
+        &> svg { display: none; }
+    }
+}

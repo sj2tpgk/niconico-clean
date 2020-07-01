@@ -1,0 +1,55 @@
+// Player (plash)
+
+@-moz-document regexp(".*www\.nicovideo\.jp/watch.*") {
+
+    // better header
+    #CommonHeader { @include header; }
+
+    // "switch to html5 player" button
+    .html5_message {
+	background: transparent;
+	border: none;
+	height: auto;
+	margin-top: 40px;
+	margin-bottom: -55px;
+        .centeringBox {
+            text-align: right;
+            #switchToHtml5 {
+                width: auto;
+                line-height: unset;
+                #switchToHtml5 {
+                    width: auto;
+                    color: #999;
+                }
+            }
+        }
+    }
+
+    ul.socialLinks { @include nosocial; }
+    .lineButton, .twitterButton, .facebookButton { @include nosocial; }
+
+    // Remove miscellaneous things
+    #wallImageContainer,  // wallpaper
+    #textMarquee,         // news scroll
+    #chipWallList,        // wallpaper selector button
+    #playerTabWrapper     // comment panel
+    { @include remove; }
+
+    // Player
+    #playerNicoplayer {
+        // box-shadow: 0 0 6px 3px #aaa;
+        margin: auto;
+    }
+    #playerContainer {
+        margin-top: 1em;
+        margin-bottom: 20em;
+    }
+
+    // Remove miscellaneous things (below player)
+    #enquete-placeholder,        // ?
+    #playlist,                   // playlist
+    #videoExplorerExpand,        // "show more videos" button
+    #outline,                    // ichiba, related videos etc.
+    { @include remove; }
+
+}

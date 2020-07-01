@@ -1,0 +1,98 @@
+// Mylist page
+
+@-moz-document regexp(".*www\.nicovideo\.jp/mylist/.*") {
+
+    // Remove ads
+    #premiumHeader, #head_ads, #web_pc_prime, #web_pc_360 {
+        @include removeAds;
+    }
+
+    // Links
+    #SYS_box_mylist_header .font12 a, a.watch {
+        @include link;
+    }
+
+    // Main background
+    #PAGECONTAINER {
+        @include dark;
+    }
+
+    // Mylist title, description, stats etc.
+    #SYS_box_mylist_header {
+        @include darkerbox;
+
+        // Title
+        h1 {
+            @include title;
+        }
+
+        // Description
+        .group_description {
+            @include darkerbox;
+        }
+
+        // Controls (play all, follow, follow count)
+        #BTN_playlist_play_all, #fav_mylist_btn_add, #fav_mylist_btn_delete, .fav_mylist_btn, .watchedCount {
+            @include darker;
+            text-shadow: none;
+            border: none;
+        }
+    }
+
+    // Pager buttons (prev, next, N'th)
+    .SYS_box_pager {
+        .SYS_btn_pager_prev, .SYS_btn_pager_next, .SYS_btn_pager, span.here {
+            @include control-link;
+
+            // Button corresponding to current page
+            &.here {
+                color: #fff;
+                border-color: darken(#fff, 50%);
+            }
+        }
+    }
+
+    // Videos
+    #SYS_page_items {
+
+        // Each video
+        table {
+            @include darkerbox;
+
+            // Date, stats
+            .font12 {
+                &, strong, p {
+                    @include darker;
+                }
+            }
+
+            // Description
+            .SYS_box_memo {
+                @include darkerbox;
+            }
+        }
+    }
+
+    // Right column
+    .content_312 {
+        // "Paste on blog site"
+        .mb8p4 > div {
+            @include darkerbox;
+        }
+    }
+
+    // Footer
+    #PAGEFOOTER {
+        @include darkerbox(top left right);
+
+        // Change color of link text color and other text
+        a, strong {
+            @include darker;
+        }
+        
+        // Remove white (bright gray) horizontal line
+        & > p > img {
+            display: none;
+        }
+    }
+}

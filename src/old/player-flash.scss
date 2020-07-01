@@ -1,0 +1,171 @@
+// Player (flash version)
+
+// prefix may be "http" or "https"
+@-moz-document regexp(".*www\.nicovideo\.jp/watch.*") {
+
+    // Remove ads
+    #textMarquee > *, .nicoSpotAds.active, .playerTabAds, #rectangleAd, #sideFollowAd, #superBanner.adBnr, #nicoIchiba .associate {
+        @include removeAds;
+    }
+    .uadTagRelated, #videoExplorerSideFollowAd, #videoExplorerSuperBannerAds {
+        // Shown on "more videos" button
+        @include removeAds;
+    }
+    #liveTopics {
+        @include removeAds;
+    }
+
+    // Remove social media buttons
+    ul.socialLinks {
+        @include removeSocial;
+    }
+    li.videoMenuList {
+        .lineButton, .twitterButton, .facebookButton {
+            @include removeSocial;
+        }
+    }
+
+    // Links
+    .videoDescription a, .toggleDetailExpand>span, .userProfile .userName, .userProfile .showOtherVideos, .div.disable, #ichibaMainLogo > a, #ichibaMain .itemname > a {
+        @include link;
+    }
+
+    // Main background
+    body, #bottomContentTabContainer > #outline {
+        @include dark;
+    }
+
+    // Header
+    .videoHeaderOuter {
+        
+        // Video title
+        #videoHeaderDetail {
+            @include darkerbox;
+            width: auto; // expand horizontally
+
+            // Title string
+            .videoHeaderTitle {
+                @include title;
+            }
+        }
+
+        // Video description
+        .videoDescription {
+            @include darkerbox;
+            width: auto; // expand horizontally
+        }
+
+        // User profile (drawn over description div element)
+        .userProfile {
+            background: transparent;
+            border: none; // remove white border
+        }
+
+        // Video thumbnail, date, stats
+        .videoMainInfoContainer {
+            @include darkerbox;
+        }
+
+        // Video tags
+        #videoTagContainer {
+            @include darkerbox;
+            width: auto; // expand horizontally
+
+            // Toggle-edit button
+            .toggleTagEdit {
+                @include darker;
+            }
+
+            // Tag links
+            .videoHeaderTagLink {
+                @include tag-link;
+            }
+        }
+    }
+    
+    // Player
+    #playerContainerWrapper {
+        // disable wallpaper
+        #wallImageContainer {
+            display: none;
+        }
+
+        // Container of player and comment panel
+        #playerAlignmentArea {
+            @include darkerbox;
+
+            // marquee
+            #textMarquee {
+                background: black;
+                border-bottom: dotted #444 2px;
+            }
+
+            // Comment panel
+            #playerTabContainer {
+                @include darker;
+
+                // "Comment" and "NG Pref" buttons
+                .player-tab-item {
+                    @include darker;
+                }
+            }
+        }
+    }
+
+    // Playlist
+    #playlist {
+        @include darkerbox;
+        margin-top: 10px;
+
+        // Info text on top of video list
+        .playlistInformation {
+            @include darker;
+            border-bottom: none; // remove bottom border
+
+            // "Playlist: xxxxx" label
+            .generationMessage {
+                @include title;
+            }
+        }
+
+        // Prev and next buttons
+        .prevArrow, .nextArrow {
+            &:not(.disabled) {
+                // filter: grayscale(100%) sepia(100%) brightness(40%) hue-rotate(150deg) saturate(1200%) brightness(150%);
+                @include active;
+            }
+        }
+
+        // Video links
+        .itemLink {
+            @include darker;
+        }
+
+        // Video links (playing)
+        .playing .itemLink {
+            @include active;
+        }
+    }
+
+    // "More videos" button
+    #videoExplorerExpand {
+        @include darkerbox(left right bottom);
+
+        .expandButton {
+            @include link;
+        }
+    }
+
+    // Ichiba
+    #bottomContentTabContainer > #outline {
+        .main {
+            @include darkerbox;
+        }
+    }
+
+    // Footer
+    #footer {
+        @include darkerbox(top);
+    }
+    
+}
