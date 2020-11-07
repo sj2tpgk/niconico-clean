@@ -19,3 +19,8 @@ $clean: true; // Aggressive cleaning
         &> svg { display: none; }
     }
 }
+
+@-moz-document regexp(".*nicovideo\.jp.*") {
+    // No gif animation on top-left of pages
+    .pageLogo .hidariue { @include remove; }
+}

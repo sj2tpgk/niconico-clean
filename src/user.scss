@@ -1,0 +1,23 @@
+// Mylist page
+
+// New user page
+// { mylist, series, posted-videos etc. } are all combined to this page
+@-moz-document regexp(".*www\.nicovideo\.jp/(user|my)[?/].*") {
+
+    // Remove some banners
+    .PremiumBanner, .PersonalFrame, .FormationFrame {
+        @include remove;
+    }
+
+    // No comment scroll over thumbnail
+    .VideoThumbnailComment { @include remove; }
+
+    // Disable dropdown of bar
+    .MainMenuContainer_stick .MainMenuContainer-menu {
+        -webkit-transform: none;
+        transform: none;
+        top: -35px;
+        position: absolute;
+    }
+
+}

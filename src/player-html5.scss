@@ -31,6 +31,9 @@
     .PreVideoStartPremiumLinkContainer
     { @include remove; }
 
+    // Remove premium recommendation banner
+    .PreVideoStartPremiumLinkOnEconomyTimeContainer { @include remove; }
+
     // Remove comment panel, related videos (right side of player)
     .MainContainer-playerPanel { @include remove; }
 

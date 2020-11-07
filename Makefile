@@ -9,6 +9,10 @@ compile:
 	sassc -t compact "${infile}" | sed 's/;/ \!important;/g' > "${outfile}"
 
 
+copy:
+	xclip -selection clipboard -i all.css
+
+
 test:
 	xclip -selection clipboard -i all.css
 	sleep 0.05

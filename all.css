@@ -1,3 +1,5 @@
+@-moz-document regexp(".*nicovideo\.jp.*") { .pageLogo .hidariue { display: none !important; } }
+
 @-moz-document regexp(".*www\.nicovideo\.jp/video_top.*") { .HeaderContainer-ads, .RecommendAreaContainer-banner.RecommendAreaContainer-webPcPrime, .RankingVideosContainer-columnRight, .NewArrivalVideosContainer-columnRight, .NewCommentVideosContainer-columnRight, .BaseLayout-footer { display: none !important; } }
 
 @-moz-document regexp(".*www\.nicovideo\.jp/watch.*") { .MarqueeContainer { display: none !important; }
@@ -10,6 +12,7 @@
   .MainContainer { margin-top: 6em !important; margin-bottom: 12em !important; box-shadow: none !important; }
   .MainContainer-player { margin: auto auto !important; box-shadow: 0px 0px 2px 1px #888 !important; }
   .AnywhereSeekablePremiumLinkContainer, .SeekBarStoryboardPremiumLink, .PreVideoStartPremiumLinkContainer { display: none !important; }
+  .PreVideoStartPremiumLinkOnEconomyTimeContainer { display: none !important; }
   .MainContainer-playerPanel { display: none !important; }
   .BottomContainer { display: none !important; }
   .SwitchToFlashLead { background: transparent !important; }
@@ -51,6 +54,10 @@
   #CommonHeader a[href*=premium] > svg { display: none !important; }
   .content_312 { display: none !important; }
   .content_672 { margin-left: calc((100% - 672px)/2) !important; } }
+
+@-moz-document regexp(".*www\.nicovideo\.jp/(user|my)[?/].*") { .PremiumBanner, .PersonalFrame, .FormationFrame { display: none !important; }
+  .VideoThumbnailComment { display: none !important; }
+  .MainMenuContainer_stick .MainMenuContainer-menu { -webkit-transform: none !important; transform: none !important; top: -35px !important; position: absolute !important; } }
 
 @-moz-document regexp(".*dic\.nicovideo\.jp/a/.*") { #dic_pc_468x60_north, .ad-bannar-maincolumn-top, #dic_pc_300x250_east, #dic_pc_300x250_east_2nd, #floatPanel, .adsense-728.a-banner_space-bottom, .logly-lift-ad.logly-lift-ad-ad, .logly-lift-credit, .adsense-728.a-banner_middle, .st-bbs_adContents { display: none !important; }
   #right-column { display: none !important; }
