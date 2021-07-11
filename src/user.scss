@@ -10,7 +10,7 @@
     }
 
     // No comment scroll over thumbnail
-    .VideoThumbnailComment { @include remove; }
+    .NC-VideoThumbnailComment { @include remove; }
 
     // Disable dropdown of bar
     .MainMenuContainer_stick .MainMenuContainer-menu {

@@ -4,7 +4,9 @@
 @-moz-document regexp(".*www\.nicovideo\.jp/(search|tag).*") {
 
     // Remove ads
-    #premiumHeader, .notice.banner, .billboard_ad, .column.sub .ads, .banner.leadBanner.ads
+    #premiumHeader, .notice.banner, .billboard_ad, .column.sub .ads, .banner.leadBanner.ads,
+    .nicoadVideoItem,
+    .video [data-nicoad-grade="gold"] .itemThumbWrap::before // overlay golden frame
     { @include noad; }
 
     // Remove social media buttons
