@@ -35,7 +35,7 @@
   #playerContainer { margin-top: 1em !important; margin-bottom: 20em !important; }
   #enquete-placeholder, #playlist, #videoExplorerExpand, #outline { display: none !important; } }
 
-@-moz-document regexp(".*www\.nicovideo\.jp/(search|tag).*") { #premiumHeader, .notice.banner, .billboard_ad, .column.sub .ads, .banner.leadBanner.ads, .nicoadVideoItem, .video [data-nicoad-grade="gold"] .itemThumbWrap::before { display: none !important; }
+@-moz-document regexp(".*www\.nicovideo\.jp/(search|tag).*") { #premiumHeader, .notice.banner, .billboard_ad, .column.sub .ads, .banner.leadBanner.ads, .nicoadVideoItem, .video [data-nicoad-grade="gold"] .itemThumbWrap::before, .video [data-nicoad-grade="silver"] .itemThumbWrap::before { display: none !important; }
   ul.share { display: none !important; }
   #CommonHeader { background: #222 !important; }
   #CommonHeader #siteHeaderInner { background: #222 !important; }
@@ -55,7 +55,7 @@
   .content_312 { display: none !important; }
   .content_672 { margin-left: calc((100% - 672px)/2) !important; } }
 
-@-moz-document regexp(".*www\.nicovideo\.jp/(user|my)[?/].*") { .PremiumBanner, .PersonalFrame, .FormationFrame { display: none !important; }
+@-moz-document regexp(".*www\.nicovideo\.jp/(user|my|series)[?/].*") { .PremiumBanner, .PersonalFrame, .FormationFrame { display: none !important; }
   .NC-VideoThumbnailComment { display: none !important; }
   .MainMenuContainer_stick .MainMenuContainer-menu { -webkit-transform: none !important; transform: none !important; top: -35px !important; position: absolute !important; } }
 

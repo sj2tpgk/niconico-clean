@@ -6,7 +6,8 @@
     // Remove ads
     #premiumHeader, .notice.banner, .billboard_ad, .column.sub .ads, .banner.leadBanner.ads,
     .nicoadVideoItem,
-    .video [data-nicoad-grade="gold"] .itemThumbWrap::before // overlay golden frame
+    .video [data-nicoad-grade="gold"] .itemThumbWrap::before,  // overlay golden frame
+    .video [data-nicoad-grade="silver"] .itemThumbWrap::before // overlay silver frame
     { @include noad; }
 
     // Remove social media buttons

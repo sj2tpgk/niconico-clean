@@ -2,7 +2,7 @@
 
 // New user page
 // { mylist, series, posted-videos etc. } are all combined to this page
-@-moz-document regexp(".*www\.nicovideo\.jp/(user|my)[?/].*") {
+@-moz-document regexp(".*www\.nicovideo\.jp/(user|my|series)[?/].*") {
 
     // Remove some banners
     .PremiumBanner, .PersonalFrame, .FormationFrame {
