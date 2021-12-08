@@ -26,6 +26,9 @@
 	// width: 640px;
     }
 
+    // Remove popup when seeking with keyboard
+    .VideoOptionGuideContainer { @include remove; }
+
     // Remove premium recommendation popups over seekbar
     .AnywhereSeekablePremiumLinkContainer, .SeekBarStoryboardPremiumLink,
     .PreVideoStartPremiumLinkContainer

@@ -11,6 +11,7 @@
   .TagItem { background: transparent !important; border: none !important; }
   .MainContainer { margin-top: 6em !important; margin-bottom: 12em !important; box-shadow: none !important; }
   .MainContainer-player { margin: auto auto !important; box-shadow: 0px 0px 2px 1px #888 !important; }
+  .VideoOptionGuideContainer { display: none !important; }
   .AnywhereSeekablePremiumLinkContainer, .SeekBarStoryboardPremiumLink, .PreVideoStartPremiumLinkContainer { display: none !important; }
   .PreVideoStartPremiumLinkOnEconomyTimeContainer { display: none !important; }
   .MainContainer-playerPanel { display: none !important; }
