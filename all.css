@@ -3,28 +3,32 @@
 @-moz-document regexp(".*www\.nicovideo\.jp/video_top.*") { .HeaderContainer-ads, .RecommendAreaContainer-banner.RecommendAreaContainer-webPcPrime, .RankingVideosContainer-columnRight, .NewArrivalVideosContainer-columnRight, .NewCommentVideosContainer-columnRight, .BaseLayout-footer { display: none !important; } }
 
 @-moz-document regexp(".*www\.nicovideo\.jp/watch.*") { .MarqueeContainer { display: none !important; }
-  #CommonHeader { background: #222 !important; }
+  #CommonHeader { background: #222 !important; /* sometimes does not work if selectors are combined??? */ }
   #CommonHeader #siteHeaderInner { background: #222 !important; }
   #CommonHeader span { color: #ddd !important; }
   #CommonHeader a[href*=premium] { color: unset !important; }
   #CommonHeader a[href*=premium] > svg { display: none !important; }
+  #CommonHeader .nico-CommonHeaderRoot a[href*="app.nicovideo.jp"] + div > div:nth-child(2), #CommonHeader .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/premium/register"] + div, #CommonHeader .nico-CommonHeaderRoot > div > div > div:nth-child(2) > div:nth-child(2) > div + div, #CommonHeader .nico-CommonHeaderRoot a[href*="www.nicovideo.jp/my"] ~ div, #CommonHeader .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/register/simple"] + div, #CommonHeader .nico-CommonHeaderRoot > div > div > div:nth-child(2) > div:nth-child(3) > div + div { display: none !important; }
   .TagItem { background: transparent !important; border: none !important; }
   .MainContainer { margin-top: 6em !important; margin-bottom: 12em !important; box-shadow: none !important; }
   .MainContainer-player { margin: auto auto !important; box-shadow: 0px 0px 2px 1px #888 !important; }
   .VideoOptionGuideContainer { display: none !important; }
   .AnywhereSeekablePremiumLinkContainer, .SeekBarStoryboardPremiumLink, .PreVideoStartPremiumLinkContainer { display: none !important; }
   .PreVideoStartPremiumLinkOnEconomyTimeContainer { display: none !important; }
+  .CommentShutter { display: none !important; }
+  .EasyCommentContainer { display: none !important; }
   .MainContainer-playerPanel { display: none !important; }
   .BottomContainer { display: none !important; }
   .SwitchToFlashLead { background: transparent !important; }
   .SwitchToFlashLead-button { color: #888 !important; }
   .FooterContainer-pageTop { display: none !important; } }
 
-@-moz-document regexp(".*www\.nicovideo\.jp/watch.*") { #CommonHeader { background: #222 !important; }
+@-moz-document regexp(".*www\.nicovideo\.jp/watch.*") { #CommonHeader { background: #222 !important; /* sometimes does not work if selectors are combined??? */ }
   #CommonHeader #siteHeaderInner { background: #222 !important; }
   #CommonHeader span { color: #ddd !important; }
   #CommonHeader a[href*=premium] { color: unset !important; }
   #CommonHeader a[href*=premium] > svg { display: none !important; }
+  #CommonHeader .nico-CommonHeaderRoot a[href*="app.nicovideo.jp"] + div > div:nth-child(2), #CommonHeader .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/premium/register"] + div, #CommonHeader .nico-CommonHeaderRoot > div > div > div:nth-child(2) > div:nth-child(2) > div + div, #CommonHeader .nico-CommonHeaderRoot a[href*="www.nicovideo.jp/my"] ~ div, #CommonHeader .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/register/simple"] + div, #CommonHeader .nico-CommonHeaderRoot > div > div > div:nth-child(2) > div:nth-child(3) > div + div { display: none !important; }
   .html5_message { background: transparent !important; border: none !important; height: auto !important; margin-top: 40px !important; margin-bottom: -55px !important; }
   .html5_message .centeringBox { text-align: right !important; }
   .html5_message .centeringBox #switchToHtml5 { width: auto !important; line-height: unset !important; }
@@ -38,21 +42,23 @@
 
 @-moz-document regexp(".*www\.nicovideo\.jp/(search|tag).*") { #premiumHeader, .notice.banner, .billboard_ad, .column.sub .ads, .banner.leadBanner.ads, .nicoadVideoItem, .video [data-nicoad-grade="gold"] .itemThumbWrap::before, .video [data-nicoad-grade="silver"] .itemThumbWrap::before { display: none !important; }
   ul.share { display: none !important; }
-  #CommonHeader { background: #222 !important; }
+  #CommonHeader { background: #222 !important; /* sometimes does not work if selectors are combined??? */ }
   #CommonHeader #siteHeaderInner { background: #222 !important; }
   #CommonHeader span { color: #ddd !important; }
   #CommonHeader a[href*=premium] { color: unset !important; }
   #CommonHeader a[href*=premium] > svg { display: none !important; }
+  #CommonHeader .nico-CommonHeaderRoot a[href*="app.nicovideo.jp"] + div > div:nth-child(2), #CommonHeader .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/premium/register"] + div, #CommonHeader .nico-CommonHeaderRoot > div > div > div:nth-child(2) > div:nth-child(2) > div + div, #CommonHeader .nico-CommonHeaderRoot a[href*="www.nicovideo.jp/my"] ~ div, #CommonHeader .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/register/simple"] + div, #CommonHeader .nico-CommonHeaderRoot > div > div > div:nth-child(2) > div:nth-child(3) > div + div { display: none !important; }
   .column.sub { display: none !important; }
   .container > div:nth-child(1) { padding-left: calc((100% - 700px) / 2) !important; }
   .FooterContainer-pageTop { display: none !important; } }
 
 @-moz-document regexp(".*www\.nicovideo\.jp/search.*") {}@-moz-document regexp(".*www\.nicovideo\.jp/tag.*") {}@-moz-document regexp(".*www\.nicovideo\.jp/mylist/.*") { #premiumHeader, #head_ads, #web_pc_prime, #web_pc_360 { display: none !important; }
-  #CommonHeader { background: #222 !important; }
+  #CommonHeader { background: #222 !important; /* sometimes does not work if selectors are combined??? */ }
   #CommonHeader #siteHeaderInner { background: #222 !important; }
   #CommonHeader span { color: #ddd !important; }
   #CommonHeader a[href*=premium] { color: unset !important; }
   #CommonHeader a[href*=premium] > svg { display: none !important; }
+  #CommonHeader .nico-CommonHeaderRoot a[href*="app.nicovideo.jp"] + div > div:nth-child(2), #CommonHeader .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/premium/register"] + div, #CommonHeader .nico-CommonHeaderRoot > div > div > div:nth-child(2) > div:nth-child(2) > div + div, #CommonHeader .nico-CommonHeaderRoot a[href*="www.nicovideo.jp/my"] ~ div, #CommonHeader .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/register/simple"] + div, #CommonHeader .nico-CommonHeaderRoot > div > div > div:nth-child(2) > div:nth-child(3) > div + div { display: none !important; }
   .content_312 { display: none !important; }
   .content_672 { margin-left: calc((100% - 672px)/2) !important; } }
 

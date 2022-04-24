@@ -37,6 +37,12 @@
     // Remove premium recommendation banner
     .PreVideoStartPremiumLinkOnEconomyTimeContainer { @include remove; }
 
+    // Hide "ログインするとコメント投稿ができます" (when not logined)
+    .CommentShutter { @include remove; }
+
+    // Hide kantan comments
+    .EasyCommentContainer { @include remove; }
+
     // Remove comment panel, related videos (right side of player)
     .MainContainer-playerPanel { @include remove; }
 
