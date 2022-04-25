@@ -2,6 +2,7 @@
 @mixin noad     { display: none; }
 @mixin nosocial { display: none; }
 @mixin remove   { display: none; }
+@mixin removeI  { display: none !important; }
 
 @mixin header {
     #siteHeaderInner { background: #222; }

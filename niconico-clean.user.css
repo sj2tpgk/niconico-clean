@@ -77,8 +77,8 @@
   #CommonHeader .nico-CommonHeaderRoot a[href*="app.nicovideo.jp"] + div > div:nth-child(2), #CommonHeader .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/premium/register"] + div, #CommonHeader .nico-CommonHeaderRoot > div > div > div:nth-child(2) > div:nth-child(2) > div + div, #CommonHeader .nico-CommonHeaderRoot a[href*="www.nicovideo.jp/my"] ~ div, #CommonHeader .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/register/simple"] + div, #CommonHeader .nico-CommonHeaderRoot > div > div > div:nth-child(2) > div:nth-child(3) > div + div { display: none; }
   #premiumHeader, .notice.banner, .billboard_ad, .column.sub .ads, .banner.leadBanner.ads, .nicoadVideoItem, .video [data-nicoad-grade="gold"] .itemThumbWrap::before, .video [data-nicoad-grade="silver"] .itemThumbWrap::before { display: none; }
   ul.share { display: none; }
-  .column.sub { display: none; }
-  .container > div:nth-child(1) { padding-left: calc((100% - 700px) / 2); }
+  .column.sub { display: none !important; }
+  .column.main { padding-left: calc((1024px - 700px) / 2); }
   .FooterContainer-pageTop { display: none; } }
 
 @-moz-document regexp(".*www\.nicovideo\.jp/search.*") {}@-moz-document regexp(".*www\.nicovideo\.jp/tag.*") {}@-moz-document regexp(".*www\.nicovideo\.jp/mylist/.*") { #CommonHeader { background: #222; /* sometimes does not work if selectors are combined??? */ }

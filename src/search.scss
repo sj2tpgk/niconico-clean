@@ -17,12 +17,10 @@
     ul.share { @include nosocial; }
 
     // Remove side panel
-    .column.sub { @include remove; }
+    .column.sub { @include removeI; }
 
     // Center search results (because we removed the side panel)
-    .container > div:nth-child(1) {
-        padding-left: calc((100% - 700px) / 2);
-    }
+    .column.main { padding-left: calc((1024px - 700px) / 2); }
 
     // Remove "page top" button
     .FooterContainer-pageTop { @include remove; }
