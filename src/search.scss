@@ -3,6 +3,9 @@
 
 @-moz-document regexp(".*www\.nicovideo\.jp/(search|tag).*") {
 
+    // Better header
+    #CommonHeader { @include header; }
+
     // Remove ads
     #premiumHeader, .notice.banner, .billboard_ad, .column.sub .ads, .banner.leadBanner.ads,
     .nicoadVideoItem,
@@ -12,9 +15,6 @@
 
     // Remove social media buttons
     ul.share { @include nosocial; }
-
-    // White site header
-    #CommonHeader { @include header; }
 
     // Remove side panel
     .column.sub { @include remove; }

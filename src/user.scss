@@ -4,6 +4,9 @@
 // { mylist, series, posted-videos etc. } are all combined to this page
 @-moz-document regexp(".*www\.nicovideo\.jp/(user|my|series)[?/].*") {
 
+    // Better header
+    #CommonHeader { @include header; }
+
     // Remove some banners
     .PremiumBanner, .PersonalFrame, .FormationFrame {
         @include remove;

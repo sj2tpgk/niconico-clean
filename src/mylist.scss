@@ -2,6 +2,9 @@
 
 @-moz-document regexp(".*www\.nicovideo\.jp/mylist/.*") {
 
+    // Better header
+    #CommonHeader { @include header; }
+
     // Remove ads
     #premiumHeader, #head_ads, #web_pc_prime, #web_pc_360 {
         @include noad;

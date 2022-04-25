@@ -6,6 +6,10 @@ all: compile test
 
 # replaced ruby-sass with sassc
 compile:
+	sassc -t compact "${infile}" > "${outfile}"
+
+
+compileI:
 	sassc -t compact "${infile}" | sed 's/;/ \!important;/g' > "${outfile}"
 
 

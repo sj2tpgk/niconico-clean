@@ -2,7 +2,7 @@
 
 @-moz-document regexp(".*www\.nicovideo\.jp/watch.*") {
 
-    // better header
+    // Better header
     #CommonHeader { @include header; }
 
     // "switch to html5 player" button

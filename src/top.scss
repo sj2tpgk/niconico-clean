@@ -1,7 +1,10 @@
 // Top page (and variants for various genres)
 
 // Common code for all genres
-@-moz-document regexp(".*www\.nicovideo\.jp/video_top.*") {
+@-moz-document regexp(".*www\.nicovideo\.jp/video_top.*"), regexp(".*www\.nicovideo\.jp/\?.*") {
+
+    // Better header
+    #CommonHeader { @include header; }
 
     // Remove ads
     .HeaderContainer-ads,

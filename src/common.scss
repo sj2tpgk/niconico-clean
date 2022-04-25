@@ -21,13 +21,21 @@ $clean: true; // Aggressive cleaning
 
     // Hide dropdowns
     /* sometimes does not work if selectors are combined??? */
-    .nico-CommonHeaderRoot a[href*="app.nicovideo.jp"] + div > div:nth-child(2), /* その他 */
-    .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/premium/register"] + div, /* プレミアム会員登録 (logined) */
-    .nico-CommonHeaderRoot>div>div>div:nth-child(2)  > div:nth-child(2) > div + div, /* お知らせ (logined) */
-    .nico-CommonHeaderRoot a[href*="www.nicovideo.jp/my"] ~ div, /* 顔のマーク (logined) */
-    .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/register/simple"] + div, /* 会員登録 (not logined) */
-    .nico-CommonHeaderRoot>div>div>div:nth-child(2)  > div:nth-child(3) > div + div /* 顔のマーク (not logined) */
-    { display: none }
+    // .nico-CommonHeaderRoot a[href*="app.nicovideo.jp"] + div > div:nth-child(2), /* その他 */
+    // .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/premium/register"] + div, /* プレミアム会員登録 (logined) */
+    // .nico-CommonHeaderRoot>div>div>div:nth-child(2)  > div:nth-child(2) > div + div, /* お知らせ (logined) */
+    // .nico-CommonHeaderRoot a[href*="www.nicovideo.jp/my"] ~ div, /* 顔のマーク (logined) */
+    // .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/register/simple"] + div, /* 会員登録 (not logined) */
+    // .nico-CommonHeaderRoot>div>div>div:nth-child(2)  > div:nth-child(3) > div + div /* 顔のマーク (not logined) */
+    .nico-CommonHeaderRoot {
+        a[href*="app.nicovideo.jp"] + div > div:nth-child(2), /* その他 */
+        a[href*="account.nicovideo.jp/premium/register"] + div, /* プレミアム会員登録 (logined) */
+        >div>div>div:nth-child(2)  > div:nth-child(2) > div + div, /* お知らせ (logined) */
+        a[href*="www.nicovideo.jp/my"] ~ div, /* 顔のマーク (logined) */
+        a[href*="account.nicovideo.jp/register/simple"] + div, /* 会員登録 (not logined) */
+        >div>div>div:nth-child(2)  > div:nth-child(3) > div + div /* 顔のマーク (not logined) */
+        { display: none }
+    }
 }
 
 @-moz-document regexp(".*nicovideo\.jp.*") {

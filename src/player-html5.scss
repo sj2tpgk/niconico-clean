@@ -1,10 +1,10 @@
 @-moz-document regexp(".*www\.nicovideo\.jp/watch.*") {
 
+    // Better header
+    #CommonHeader { @include header; }
+
     // Remove news scroll
     .MarqueeContainer { @include noad; }
-
-    // Header
-    #CommonHeader { @include header; }
 
     // Tags
     .TagItem {

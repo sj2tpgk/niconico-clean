@@ -2,6 +2,9 @@
 
 @-moz-document regexp(".*dic\.nicovideo\.jp/a/.*") {
 
+    // Better header
+    #CommonHeader { @include header; }
+
     // Remove ads
     #dic_pc_468x60_north, .ad-bannar-maincolumn-top,
     #dic_pc_300x250_east, #dic_pc_300x250_east_2nd,
