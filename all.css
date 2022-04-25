@@ -14,10 +14,19 @@
   #CommonHeader a[href*=premium] { color: unset; }
   #CommonHeader a[href*=premium] > svg { display: none; }
   #CommonHeader .nico-CommonHeaderRoot a[href*="app.nicovideo.jp"] + div > div:nth-child(2), #CommonHeader .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/premium/register"] + div, #CommonHeader .nico-CommonHeaderRoot > div > div > div:nth-child(2) > div:nth-child(2) > div + div, #CommonHeader .nico-CommonHeaderRoot a[href*="www.nicovideo.jp/my"] ~ div, #CommonHeader .nico-CommonHeaderRoot a[href*="account.nicovideo.jp/register/simple"] + div, #CommonHeader .nico-CommonHeaderRoot > div > div > div:nth-child(2) > div:nth-child(3) > div + div { display: none; }
-  .MarqueeContainer { display: none; }
   .TagItem { background: transparent; border: none; }
-  .MainContainer { margin-top: 6em; margin-bottom: 12em; box-shadow: none; }
+  .MainContainer-marquee { display: none; }
+  .MainContainer { box-shadow: none; }
   .MainContainer-player { margin: auto auto; box-shadow: 0px 0px 2px 1px #888; }
+  .WatchAppContainer-main { display: flex; flex-direction: column-reverse; }
+  .HeaderContainer { display: grid; }
+  .HeaderContainer > .HeaderContainer-topArea { grid-column: 1/2; grid-row: 1; }
+  .HeaderContainer > .VideoDescriptionContainer { grid-column: 1/2; grid-row: 3; }
+  .HeaderContainer > .TagContainer { grid-column: 1/2; grid-row: 2; }
+  .HeaderContainer > .HeaderContainer-row { grid-column: 3; grid-row: 1/5; display: flex; flex-direction: column; margin-left: 60px; }
+  .HeaderContainer > .HeaderContainer-row .VideoMetaContainer { display: flex; flex-direction: column; height: unset; }
+  .HeaderContainer > .HeaderContainer-row .VideoMetaContainer > div { margin-top: .6em; }
+  .MainContainer { margin: 2em 0 2em; }
   .VideoOptionGuideContainer { display: none; }
   .AnywhereSeekablePremiumLinkContainer, .SeekBarStoryboardPremiumLink, .PreVideoStartPremiumLinkContainer { display: none; }
   .PreVideoStartPremiumLinkOnEconomyTimeContainer { display: none; }
