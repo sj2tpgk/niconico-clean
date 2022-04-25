@@ -1,3 +1,17 @@
+/* ==UserStyle==
+@name         NicoNico Clean
+@namespace    sj2tpgk.usercss
+@version      1.0.0
+@description  Niconico clean usercss theme
+@author       sj2tpgk
+@homepageURL  https://github.com/sj2tpgk/niconico-clean
+@homepageURL  https://github.com/sj2tpgk/niconico-clean/issues
+@updateURL    https://raw.githubusercontent.com/sj2tpgk/niconico-clean/master/niconico-clean.user.css
+@license      CC-BY-SA-4.0
+==/UserStyle== */
+
+
+
 @-moz-document regexp(".*nicovideo\.jp.*") { .pageLogo .hidariue { display: none; } }
 
 @-moz-document regexp(".*www\.nicovideo\.jp/video_top.*"), regexp(".*www\.nicovideo\.jp/\?.*") { #CommonHeader { background: #222; /* sometimes does not work if selectors are combined??? */ }

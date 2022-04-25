@@ -1,20 +1,17 @@
 infile="src/all.scss"
-outfile="all.css"
+uc_template="uc-template.css"
+uc_outfile="niconico-clean.user.css"
 
 all: compile test
 	echo "done"
 
 # replaced ruby-sass with sassc
 compile:
-	sassc -t compact "${infile}" > "${outfile}"
-
-
-compileI:
-	sassc -t compact "${infile}" | sed 's/;/ \!important;/g' > "${outfile}"
+	{ cat "${uc_template}"; echo; sassc -t compact "${infile}"; } > "${uc_outfile}"
 
 
 copy:
-	xclip -selection clipboard -i all.css
+	xclip -selection clipboard -i "${uc_outfile}"
 
 
 test:
