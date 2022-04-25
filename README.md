@@ -1,7 +1,7 @@
 # Niconico clean usercss theme
 
 <img src="images/watch-0.png" width="550">
-<br><br>
+<br>
 <img src="images/search-0.png" width="550">
 
 <!--
