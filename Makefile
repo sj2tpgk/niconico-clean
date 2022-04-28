@@ -7,6 +7,7 @@ all: compile test
 
 # replaced ruby-sass with sassc
 compile:
+	# !!! Please update VERSION in ${uc_template} !!!
 	{ cat "${uc_template}"; echo; sassc -t compact "${infile}"; } > "${uc_outfile}"
 
 

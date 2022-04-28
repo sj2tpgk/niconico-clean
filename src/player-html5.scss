@@ -33,6 +33,9 @@
             > .TagContainer              { grid-column: 1/2; grid-row: 2; }
             > .HeaderContainer-row       { grid-column: 3; grid-row: 1/5; display: flex; flex-direction: column; margin-left: 60px }
 
+            // "Uploader is streaming live now" banner at the bottom
+            > .OwnerNicoliveBannerContainer { grid-column: 1/2; grid-row: 5; }
+
             // Vertical stats
             > .HeaderContainer-row .VideoMetaContainer {
                 display: flex; flex-direction: column;

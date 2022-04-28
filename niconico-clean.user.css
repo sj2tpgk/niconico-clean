@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         NicoNico Clean
 @namespace    sj2tpgk.usercss
-@version      1.0.1
+@version      1.0.2
 @description  Niconico clean usercss theme
 @author       sj2tpgk
 @homepageURL  https://github.com/sj2tpgk/niconico-clean
@@ -38,6 +38,7 @@
   .HeaderContainer > .VideoDescriptionContainer { grid-column: 1/2; grid-row: 3; }
   .HeaderContainer > .TagContainer { grid-column: 1/2; grid-row: 2; }
   .HeaderContainer > .HeaderContainer-row { grid-column: 3; grid-row: 1/5; display: flex; flex-direction: column; margin-left: 60px; }
+  .HeaderContainer > .OwnerNicoliveBannerContainer { grid-column: 1/2; grid-row: 5; }
   .HeaderContainer > .HeaderContainer-row .VideoMetaContainer { display: flex; flex-direction: column; height: unset; }
   .HeaderContainer > .HeaderContainer-row .VideoMetaContainer > div { margin-top: .6em; }
   .MainContainer { margin: 2em 0 2em; }
