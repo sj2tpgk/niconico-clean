@@ -1,12 +1,11 @@
 /* ==UserStyle==
 @name         NicoNico Clean
 @namespace    sj2tpgk.usercss
-@version      1.0.2
+@version      1.0.3
 @description  Niconico clean usercss theme
 @author       sj2tpgk
-@homepageURL  https://github.com/sj2tpgk/niconico-clean
-@homepageURL  https://github.com/sj2tpgk/niconico-clean/issues
-@updateURL    https://raw.githubusercontent.com/sj2tpgk/niconico-clean/master/niconico-clean.user.css
+@homepageURL  https://codeberg.org/sj2tpgk/niconico-clean
+@updateURL    https://codeberg.org/sj2tpgk/niconico-clean/raw/branch/master/niconico-clean.user.css
 @license      CC-BY-SA-4.0
 ==/UserStyle== */
 
@@ -51,7 +50,8 @@
   .BottomContainer { display: none; }
   .SwitchToFlashLead { background: transparent; }
   .SwitchToFlashLead-button { color: #888; }
-  .FooterContainer-pageTop { display: none; } }
+  .FooterContainer-pageTop { display: none; }
+  .HeaderContainer-creatorSupportAccepting { display: none; } }
 
 @-moz-document regexp(".*www\.nicovideo\.jp/watch.*") { #CommonHeader { background: #222; /* sometimes does not work if selectors are combined??? */ }
   #CommonHeader #siteHeaderInner { background: #222; }

@@ -83,4 +83,7 @@
 
     // Remove "page top" button
     .FooterContainer-pageTop { @include remove; }
+
+    // Remove creatorSupportAccepting (above username)
+    .HeaderContainer-creatorSupportAccepting { @include remove; }
 }
