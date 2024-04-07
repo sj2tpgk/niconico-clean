@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name         NicoNico Clean
 @namespace    sj2tpgk.usercss
-@version      1.0.3
+@version      1.0.4
 @description  Niconico clean usercss theme
 @author       sj2tpgk
 @homepageURL  https://codeberg.org/sj2tpgk/niconico-clean
@@ -80,7 +80,8 @@
   ul.share { display: none; }
   .column.sub { display: none !important; }
   .column.main { padding-left: calc((1024px - 700px) / 2); }
-  .FooterContainer-pageTop { display: none; } }
+  .FooterContainer-pageTop { display: none; }
+  .tagCaption .tagFollowArea { display: none; } }
 
 @-moz-document regexp(".*www\.nicovideo\.jp/search.*") {}@-moz-document regexp(".*www\.nicovideo\.jp/tag.*") {}@-moz-document regexp(".*www\.nicovideo\.jp/mylist/.*") { #CommonHeader { background: #222; /* sometimes does not work if selectors are combined??? */ }
   #CommonHeader #siteHeaderInner { background: #222; }

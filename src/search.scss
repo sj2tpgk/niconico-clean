@@ -25,6 +25,9 @@
     // Remove "page top" button
     .FooterContainer-pageTop { @include remove; }
 
+    // Remove "Follow this tag" etc.
+    .tagCaption .tagFollowArea { @include remove; }
+
 }
 
 
