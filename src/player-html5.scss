@@ -86,4 +86,7 @@
 
     // Remove creatorSupportAccepting (above username)
     .HeaderContainer-creatorSupportAccepting { @include remove; }
+
+    // Remove multi tab error
+    .VideoErrorContainer { @include remove; }
 }
